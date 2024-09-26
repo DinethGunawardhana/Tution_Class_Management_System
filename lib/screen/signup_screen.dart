@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tition_class_mangement_system/widjets/custom_scaffold.dart';
+import '../theme/theme.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -36,6 +37,15 @@ return CustomScaffold(
                   key: _formSignUpKey,
                   child: Column(
                     children: [
+                      Text(
+                        'Get Started',
+                        style: TextStyle(
+                          fontSize: 30.0,
+                          fontWeight: FontWeight.w900,
+                          color: lightColorScheme.primary,
+                        ),
+                      ),
+                      const SizedBox(height: 16),
                       TextFormField(
                         validator: (value) {
                           if (value == null || value.isEmpty){
